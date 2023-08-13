@@ -133,26 +133,51 @@ const Main = () => {
       <section className="contactUs section">
         <h2 className="contactUs__title">Связаться с нами</h2>
         <div className="contactUs__content-wrapper">
-          <form action="">
-            <label htmlFor="">
-              {' '}
-              Имя
-              <input type="text" className="contactUs__input" />
+          <form className="contactUs__form" action="">
+            <input type="text" className="contactUs__input" placeholder="Имя" />
+            <label class="contactUs__placeinput">
+              <input type="number" required className="contactUs__input" />
+              <div className="contactUs__input-placeholder">
+                Номер телефона<span>*</span>
+              </div>
             </label>
-            <label htmlFor="">
-              Номер телефона
-              <input type="number" className="contactUs__input" />
+            <label className="contactUs__placeinput">
+              <input type="text" required className="contactUs__input" />
+              <div className="contactUs__input-placeholder">
+                E-mail<span>*</span>
+              </div>
             </label>
-            <label htmlFor="">
-              E-mail
-              <input type="email" className="contactUs__input" />
+
+            <input
+              type="text"
+              className="contactUs__input"
+              placeholder="Интересующий товар/услуга"
+            />
+            <label className="contactUs__placeinput">
+              <textarea
+                className="contactUs__input"
+                cols="30"
+                rows="6"
+                required
+              ></textarea>
+              <div className="contactUs__input-placeholder">
+                Сообщение<span>*</span>
+              </div>
             </label>
-            <label htmlFor="">
-              Интересующий товар/услуга
-              <input type="text" className="contactUs__input" />
+
+            <label htmlFor="policy" class="contactUs__checkbox-label view">
+              <input
+                className="contactUs__checkbox"
+                type="checkbox"
+                name="policy"
+                id="policy"
+              />
+              <span className="contactUs__custom-checkbox"></span>
+              Отправляя заявку Вы соглашаетесь с политикой конфиденциальности
             </label>
-            <textarea name="" id="" cols="30" rows="10"></textarea>
-            <input type="checkbox" />
+            <button type="submit">
+              ОТПРАВИТЬ <ArrowRight />
+            </button>
           </form>
           <img src={contsctImg} alt="Men call" />
         </div>
