@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.016c801a.css",
+    "main.js": "/static/js/main.c715818e.js",
+    "static/media/Rectangle 1.png": "/static/media/Rectangle 1.d5ede085c09715282cdd.png",
+    "static/media/image 3.png": "/static/media/image 3.8fd766b530791ee083c6.png",
+    "static/media/image 1.png": "/static/media/image 1.a62988901847822169bf.png",
+    "static/media/TTHoves-Light.ttf": "/static/media/TTHoves-Light.ff447b186f99becf2ff2.ttf",
+    "static/media/TTHoves-Bold.ttf": "/static/media/TTHoves-Bold.170a72c0ea1224530434.ttf",
+    "static/media/TTHoves-Regular.ttf": "/static/media/TTHoves-Regular.22badb647628141aaacb.ttf",
+    "static/media/TTHoves-Medium.ttf": "/static/media/TTHoves-Medium.c84646119459f89cd0d4.ttf",
+    "static/media/ContactUs.png": "/static/media/ContactUs.d3e12ebe1a6a8ea9fd63.png",
+    "static/media/image 4.png": "/static/media/image 4.55e72e5a3ffd854a45d4.png",
+    "static/media/image 2.png": "/static/media/image 2.c976c3ae997b1ec09f64.png",
+    "static/media/Rectangle 3.png": "/static/media/Rectangle 3.b8bbabbf56dda9d7648e.png",
+    "static/media/OurHead.png": "/static/media/OurHead.1f90e5ba90f3e26b93aa.png",
+    "static/media/Rectangle 2.png": "/static/media/Rectangle 2.91dff2ca064ab30fa5a1.png",
+    "static/media/Rectangle 4.png": "/static/media/Rectangle 4.8f014c909b8d929d9f44.png",
+    "static/media/logo.svg": "/static/media/logo.e33061f24319c9d4aca34b24580d5020.svg",
+    "index.html": "/index.html",
+    "static/media/arrow-2-left-long.svg": "/static/media/arrow-2-left-long.9c37b2c87c457d148fa3ccb38ab08242.svg",
+    "static/media/arrow-2-right-long.svg": "/static/media/arrow-2-right-long.d2ee92fe5a3a3afd5b2b3cf94580caaf.svg",
+    "static/media/Line 3.svg": "/static/media/Line 3.e93ad0f056fea71334e9df2abc993940.svg",
+    "main.016c801a.css.map": "/static/css/main.016c801a.css.map",
+    "main.c715818e.js.map": "/static/js/main.c715818e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.016c801a.css",
+    "static/js/main.c715818e.js"
+  ]
+}
