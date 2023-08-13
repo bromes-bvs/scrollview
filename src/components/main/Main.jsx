@@ -164,7 +164,6 @@ const Main = () => {
                 Сообщение<span>*</span>
               </div>
             </label>
-
             <label htmlFor="policy" class="contactUs__checkbox-label view">
               <input
                 className="contactUs__checkbox"
