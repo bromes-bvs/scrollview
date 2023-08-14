@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import heroImg from '../../assets/images/Rectangle 1.png';
+import heroImgSecond from '../../assets/images/achitecture-wallpaper.jpg';
 import aboutImg1 from '../../assets/images/Rectangle 2.png';
 import aboutImg2 from '../../assets/images/Rectangle 3.png';
 import aboutImg3 from '../../assets/images/Rectangle 4.png';
@@ -16,6 +17,27 @@ import { ReactComponent as ArrowRight } from '../../assets/logo/arrow-2-right-lo
 import { ReactComponent as Line } from '../../assets/logo/Line 3.svg';
 
 const Main = () => {
+  const [index, setIndex] = useState('01');
+  const first = useRef();
+  const second = useRef();
+  // const buttonRight = useRef();
+  // const buttonLeft = useRef();
+
+  const toggleImage = (e, i) => {
+    i !== '01' ? setIndex('02') : setIndex('01');
+    e.target.setAttribute('disabled', true);
+    // i !== '01'
+    //   ? buttonLeft.current.removeAttribute('disabled')
+    //   : buttonRight.current.removeAttribute('disabled');
+
+    // document
+    //   .querySelector('.hero__arrow-button[disabled]')
+    //   .removeAttribute('disabled');
+    first.current.classList.toggle('translate');
+    second.current.classList.toggle('translate');
+    // console.log(buttonLeft.current);
+  };
+
   return (
     <main>
       <section className="hero section">
@@ -24,21 +46,40 @@ const Main = () => {
             PROJECT <span className="hero__title--view">HOME</span>
           </h1>
           <div className="hero__arrow-wrapper">
-            <button className="hero__arrow-button">
+            <button
+              type="button"
+              // ref={buttonLeft}
+              disabled
+              className="hero__arrow-button"
+              onClick={e => toggleImage(e, '01')}
+            >
               <ArrowLeft />
             </button>
-            <button className="hero__arrow-button">
+            <button
+              type="button"
+              // ref={buttonRight}
+              className="hero__arrow-button"
+              onClick={e => toggleImage(e, '02')}
+            >
               <ArrowRight />
             </button>
           </div>
           <div className="hero__counter-wrapper">
-            <p className="hero__counter">01</p>
+            <p style={{ width: '30px' }} className="hero__counter">
+              {index}
+            </p>
             <Line />
             <p className="hero__counter">02</p>
           </div>
         </div>
         <div className="hero__img-wrapper">
-          <img className="hero__img" src={heroImg} alt="Build" />
+          <img ref={first} className="hero__img" src={heroImg} alt="Build" />
+          <img
+            ref={second}
+            className="hero__img"
+            src={heroImgSecond}
+            alt="Build"
+          />
           <button type="button">
             ВЗГЛЯНУТЬ <ArrowRight />
           </button>
@@ -135,7 +176,7 @@ const Main = () => {
         <div className="contactUs__content-wrapper">
           <form className="contactUs__form" action="">
             <input type="text" className="contactUs__input" placeholder="Имя" />
-            <label class="contactUs__placeinput">
+            <label className="contactUs__placeinput">
               <input type="number" required className="contactUs__input" />
               <div className="contactUs__input-placeholder">
                 Номер телефона<span>*</span>
@@ -164,7 +205,7 @@ const Main = () => {
                 Сообщение<span>*</span>
               </div>
             </label>
-            <label htmlFor="policy" class="contactUs__checkbox-label view">
+            <label htmlFor="policy" className="contactUs__checkbox-label view">
               <input
                 className="contactUs__checkbox"
                 type="checkbox"
