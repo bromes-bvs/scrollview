@@ -26,13 +26,14 @@ const Main = () => {
   const toggleImage = (e, i) => {
     i !== '01' ? setIndex('02') : setIndex('01');
     e.target.setAttribute('disabled', true);
+
     // i !== '01'
     //   ? buttonLeft.current.removeAttribute('disabled')
     //   : buttonRight.current.removeAttribute('disabled');
 
-    // document
-    //   .querySelector('.hero__arrow-button[disabled]')
-    //   .removeAttribute('disabled');
+    document
+      .querySelector('.hero__arrow-button[disabled]')
+      .removeAttribute('disabled');
     first.current.classList.toggle('translate');
     second.current.classList.toggle('translate');
     // console.log(buttonLeft.current);
@@ -49,7 +50,7 @@ const Main = () => {
             <button
               type="button"
               // ref={buttonLeft}
-              disabled
+              disabled={true}
               className="hero__arrow-button"
               onClick={e => toggleImage(e, '01')}
             >
