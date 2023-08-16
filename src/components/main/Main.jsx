@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+
 import heroImg from '../../assets/images/Rectangle 1.png';
 import heroImgSecond from '../../assets/images/achitecture-wallpaper.jpg';
 import aboutImg1 from '../../assets/images/Rectangle 2.png';
@@ -20,47 +21,35 @@ const Main = () => {
   const [index, setIndex] = useState('01');
   const first = useRef();
   const second = useRef();
-  // const buttonRight = useRef();
-  // const buttonLeft = useRef();
 
-  const toggleImage = (e, i) => {
-    i !== '01' ? setIndex('02') : setIndex('01');
-    e.target.setAttribute('disabled', true);
+  const toggleImage = i => {
+    setIndex(i);
 
-    // i !== '01'
-    //   ? buttonLeft.current.removeAttribute('disabled')
-    //   : buttonRight.current.removeAttribute('disabled');
-
-    document
-      .querySelector('.hero__arrow-button[disabled]')
-      .removeAttribute('disabled');
     first.current.classList.toggle('translate');
     second.current.classList.toggle('translate');
-    // console.log(buttonLeft.current);
   };
 
   return (
     <main>
       <section className="hero section">
         <div className="hero__titel-wrapper">
-          <h1 className="hero__title">
+          <h1 data-speed="1.2" className="hero__title">
             PROJECT <span className="hero__title--view">HOME</span>
           </h1>
           <div className="hero__arrow-wrapper">
             <button
               type="button"
-              // ref={buttonLeft}
-              disabled={true}
+              disabled={index === '01'}
               className="hero__arrow-button"
-              onClick={e => toggleImage(e, '01')}
+              onClick={() => toggleImage('01')}
             >
               <ArrowLeft />
             </button>
             <button
               type="button"
-              // ref={buttonRight}
+              disabled={index === '02'}
               className="hero__arrow-button"
-              onClick={e => toggleImage(e, '02')}
+              onClick={() => toggleImage('02')}
             >
               <ArrowRight />
             </button>
@@ -73,7 +62,7 @@ const Main = () => {
             <p className="hero__counter">02</p>
           </div>
         </div>
-        <div className="hero__img-wrapper">
+        <div data-speed="0.9" className="hero__img-wrapper">
           <img ref={first} className="hero__img" src={heroImg} alt="Build" />
           <img
             ref={second}
@@ -98,7 +87,7 @@ const Main = () => {
           </div>
           <img src={aboutImg2} alt="Build aestetic" className="about__img " />
         </div>
-        <div className="about__title-wrapper">
+        <div data-speed="1.2" className="about__title-wrapper">
           <h2 className="about__title">О компании</h2>
           <p className="about__p">
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -116,14 +105,14 @@ const Main = () => {
       <section className="tasks section">
         <h2 className="tasks__title">Основные задачи</h2>
         <div className="tasks__numbers-wrapper">
-          <div>
+          <div className="smooth" data-speed="1.1">
             <img className="tasks__img" src={numberOne} alt="Number" />
             <p className="tasks__p">
               Создание комфортных условий и повышение качества обслуживания
               клиентов
             </p>
           </div>
-          <div>
+          <div className="trigger_1">
             <img className="tasks__img" src={numberTwo} alt="Number" />
             <p className="tasks__p second">
               Постоянно совершенствовать качество предоставляемых услуг путем
@@ -137,7 +126,7 @@ const Main = () => {
         <h2 className="projects__title">Наши проекты</h2>
         <div className="projects__img-wrapper">
           <div>
-            <div className="projects__name-wrapper">
+            <div className="projects__name-wrapper scroll-left">
               <h3 className="projects__secondary-title">ДОСУГОВЫЙ ЦЕНТР</h3>
               <button>
                 ПОДРОБНЕЕ
@@ -145,24 +134,24 @@ const Main = () => {
               </button>
             </div>
             <img
-              className="projects__img"
+              className="projects__img scroll-right"
               src={projectImg1}
               alt="Leisure center"
             />
           </div>
           <div>
             <img
-              className="projects__img"
+              className="projects__img scroll-left"
               src={projectImg2}
               alt="Leisure center"
             />
             <img
-              className="projects__img"
+              className="projects__img scroll-center"
               src={projectImg3}
               alt="Leisure center"
             />
             <img
-              className="projects__img"
+              className="projects__img scroll-right"
               src={projectImg4}
               alt="Leisure center"
             />
@@ -175,7 +164,7 @@ const Main = () => {
       <section className="contactUs section">
         <h2 className="contactUs__title">Связаться с нами</h2>
         <div className="contactUs__content-wrapper">
-          <form className="contactUs__form" action="">
+          <form className="contactUs__form">
             <input type="text" className="contactUs__input" placeholder="Имя" />
             <label className="contactUs__placeinput">
               <input type="number" required className="contactUs__input" />
@@ -220,7 +209,12 @@ const Main = () => {
               ОТПРАВИТЬ <ArrowRight />
             </button>
           </form>
-          <img src={contsctImg} alt="Men call" />
+          <img
+            data-speed="1.2"
+            className="contactUs__img"
+            src={contsctImg}
+            alt="Men call"
+          />
         </div>
       </section>
     </main>
