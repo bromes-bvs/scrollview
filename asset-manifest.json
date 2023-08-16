@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/scrollview/static/css/main.ae04b757.css",
-    "main.js": "/scrollview/static/js/main.35a39652.js",
+    "main.css": "/scrollview/static/css/main.7689daf2.css",
+    "main.js": "/scrollview/static/js/main.666bce92.js",
     "static/media/Rectangle 1.png": "/scrollview/static/media/Rectangle 1.d5ede085c09715282cdd.png",
     "static/media/image 3.png": "/scrollview/static/media/image 3.8fd766b530791ee083c6.png",
     "static/media/image 1.png": "/scrollview/static/media/image 1.a62988901847822169bf.png",
@@ -22,19 +22,19 @@
     "static/media/Twitter-X.svg": "/scrollview/static/media/Twitter-X.ca6c582e8a6f37a51a3792cbb40d35ff.svg",
     "static/media/pinterest.svg": "/scrollview/static/media/pinterest.7e5c00c31f8f3ad911671acc4eff948c.svg",
     "static/media/Linked In.svg": "/scrollview/static/media/Linked In.6e8d2bd86f8b20977a27f5f3884b9aeb.svg",
-    "static/media/mail.svg": "/scrollview/static/media/mail.f89736e3d11e4cf40e0cd95f709f033b.svg",
     "index.html": "/scrollview/index.html",
+    "static/media/mail.svg": "/scrollview/static/media/mail.f89736e3d11e4cf40e0cd95f709f033b.svg",
     "static/media/arrow-2-left-long.svg": "/scrollview/static/media/arrow-2-left-long.9c37b2c87c457d148fa3ccb38ab08242.svg",
     "static/media/arrow-2-right-long.svg": "/scrollview/static/media/arrow-2-right-long.d2ee92fe5a3a3afd5b2b3cf94580caaf.svg",
     "static/media/facebook.svg": "/scrollview/static/media/facebook.bdd89a390acd6cd7c5f0a08047851b7f.svg",
-    "static/media/place.svg": "/scrollview/static/media/place.359746a1bee11c89e1b97d5a03ce5051.svg",
+    "static/media/place.svg": "/scrollview/static/media/place.cfb1dc2d425bd354894c4356084f6de8.svg",
     "static/media/accept.svg": "/scrollview/static/media/accept.7c0ffd79989050365343.svg",
     "static/media/Line 3.svg": "/scrollview/static/media/Line 3.e93ad0f056fea71334e9df2abc993940.svg",
-    "main.ae04b757.css.map": "/scrollview/static/css/main.ae04b757.css.map",
-    "main.35a39652.js.map": "/scrollview/static/js/main.35a39652.js.map"
+    "main.7689daf2.css.map": "/scrollview/static/css/main.7689daf2.css.map",
+    "main.666bce92.js.map": "/scrollview/static/js/main.666bce92.js.map"
   },
   "entrypoints": [
-    "static/css/main.ae04b757.css",
-    "static/js/main.35a39652.js"
+    "static/css/main.7689daf2.css",
+    "static/js/main.666bce92.js"
   ]
 }
